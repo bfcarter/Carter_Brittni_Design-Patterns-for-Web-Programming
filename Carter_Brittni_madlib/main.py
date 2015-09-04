@@ -4,14 +4,15 @@ def welcome():
     print "Hi, welcome to Brittni's Pet Shop Mad Lib"
 
 
-#Mom gives us money-----
+# FUNCTION Mom gives us money-----
 def calcTotal(m,y):
     total = m+y
     return total
 
 t = calcTotal(100,400)
-print "I have a total of " + str(t) + "dollars to buy a new pet"
+print "I have a total of " + str(t) + " dollars to buy a new pet"
 
+#CONDITIONAL STATEMENT budget-----
 
 budget = 500
 
@@ -25,6 +26,6 @@ else:
 
 
 #For Each" LOOP Type of breed ----
-breeds = ["Bulldog" "German Shepherd" "Labrador Retriever" "Boxer"]
+breeds = ["Bulldog", "German Shepherd", "Labrador Retriever", "Boxer"]
 for b in breeds:
-    print "Your new dog will be " + b
+    print "One of your choices for a new dog will be " + b
