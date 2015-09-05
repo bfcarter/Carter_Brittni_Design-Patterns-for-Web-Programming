@@ -4,12 +4,15 @@ __author__ = 'brittnicarter'
 # FUNCTION welcome------
 def welcome():
     print "Brittni's Pet Shop Mad Lib"
-    firstname = raw_input("Enter your first name")
-    lastname = raw_input("Enter your last name")
-    print "Hello ", firstname, lastname, "Welcome to Brittni's Pet Shop"
+
+firstname = raw_input("Enter your first name")
+lastname = raw_input("Enter your last name")
+print "Hello ", firstname, lastname, "Welcome to Brittni's Pet Shop"
 
 
 # FUNCTION Mathematical Operation Mom gives us money----
+
+
 def calcTotal(m, y):
     total = m + y
     return total
@@ -65,3 +68,10 @@ else:
 
 name = ["Ziggy", "Esther", "Linc", "Diamond"]
 print "Your new dog will be named", name [1]
+
+
+# dogs age----
+
+age = raw_input("Enter a number between 1-10")
+print "Your new dog is " + str(age)
+
