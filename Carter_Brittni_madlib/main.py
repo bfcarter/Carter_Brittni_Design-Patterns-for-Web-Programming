@@ -1,7 +1,7 @@
 __author__ = 'brittnicarter'
 
 
-# FUNCTION------
+# FUNCTION welcome------
 def welcome():
     print "Brittni's Pet Shop Mad Lib"
     firstname = raw_input("Enter your first name")
@@ -9,7 +9,7 @@ def welcome():
     print "Hello ", firstname, lastname, "Welcome to Brittni's Pet Shop"
 
 
-# FUNCTION Mom gives us money----
+# FUNCTION Mathematical Operation Mom gives us money----
 def calcTotal(m, y):
     total = m + y
     return total
@@ -39,6 +39,16 @@ for b in breeds:
 food = dict()
 food = {"Blue Buffalo": "Life Protection Form", "Simply Nourish": "Limited Ingredient Diet"}
 print "Don't forget to pick up " + food["Blue Buffalo"] + " dog food for your new friend"
+
+# Mathematical Operation Pet Insurance----
+
+def calcInsure (m, p):
+    total = m * p
+    return total
+t = calcInsure(12, 20)
+print "It is requested that you get your new friend pet insurance, it will cost " + "$" + str(t) + " for 12 months"
+
+
 
 # CONDITIONAL STATEMENT toys----
 
