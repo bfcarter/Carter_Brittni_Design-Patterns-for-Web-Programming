@@ -50,3 +50,8 @@ elif extra > 24:
     print "And you have enough to get a small Kong toy!"
 else:
     print "Save up for a few days and get a toy next time."
+
+# ARRAY dog name------
+
+name = ["Ziggy", "Esther", "Linc", "Diamond"]
+print "Your new dog will be named", name [1]
