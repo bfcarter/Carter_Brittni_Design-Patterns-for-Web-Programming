@@ -1,27 +1,30 @@
 __author__ = 'brittnicarter'
 
+
+# FUNCTION------
 def welcome():
     print "Brittni's Pet Shop Mad Lib"
-    name = raw_input("Enter your name")
-    print "Hello ", name, "Welcome to Brittni's Pet Shop"
-
+    firstname = raw_input("Enter your first name")
+    lastname = raw_input("Enter your last name")
+    print "Hello ", firstname, lastname, "Welcome to Brittni's Pet Shop"
 
 
 # FUNCTION Mom gives us money----
-def calcTotal (m,y):
-    total = m+y
+def calcTotal(m, y):
+    total = m + y
     return total
 
-t = calcTotal(100,400)
+
+t = calcTotal(100, 400)
 print "You have a total of " + str(t) + " dollars to buy a new pet"
 
-# CONDITIONAL STATEMENT budget-----
+# CONDITIONAL STATEMENT funds-----
 
-budget = 500
+funds = 500
 
-if budget > 600:
+if funds > 600:
     print "Our dream has come true, we can buy a new puppy"
-elif budget > 450:
+elif funds > 450:
     print "You can't get a puppy but at least we can get a rescue dog"
 else:
     print "No dog today."
@@ -34,7 +37,7 @@ for b in breeds:
 
 # dictionary----------
 food = dict()
-food = {"Blue Buffalo":"Life Protection Form","Simply Nourish":"Limited Ingredient Diet" }
+food = {"Blue Buffalo": "Life Protection Form", "Simply Nourish": "Limited Ingredient Diet"}
 print "Don't forget to pick up " + food["Blue Buffalo"] + " dog food for your new friend"
 
 # CONDITIONAL STATEMENT toys----
@@ -42,8 +45,8 @@ print "Don't forget to pick up " + food["Blue Buffalo"] + " dog food for your ne
 extra = 25
 
 if extra > 26:
-    print "You have enough extra money to get your pet a large Kong toy!"
+    print "And you have enough extra money to get your pet a large Kong toy!"
 elif extra > 24:
-    print "You have enough to get a small Kong toy!"
+    print "And you have enough to get a small Kong toy!"
 else:
     print "Save up for a few days and get a toy next time."
