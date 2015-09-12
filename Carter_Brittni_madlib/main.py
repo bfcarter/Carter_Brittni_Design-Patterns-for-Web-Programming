@@ -5,8 +5,8 @@ __author__ = 'brittnicarter'
 def welcome():
     print "Brittni's Pet Shop Mad Lib"
 
-firstname = raw_input("Enter your first name")
-lastname = raw_input("Enter your last name")
+firstname = raw_input("Enter your first name ")
+lastname = raw_input("Enter your last name ")
 print "Hello ", firstname, lastname, "Welcome to Brittni's Pet Shop"
 
 
@@ -39,7 +39,7 @@ for b in breeds:
     print "One of your choices for a new dog will be " + b
 
 # dictionary----------
-bags = raw_input("Enter a number")
+bags = raw_input("Enter a number ")
 
 food = dict()
 food = {"Blue Buffalo": "Life Protection Form", "Simply Nourish": "Limited Ingredient Diet"}
@@ -74,12 +74,12 @@ print "Your new dog will be named", name [1]
 
 # dogs age----
 
-age = raw_input("Enter a number between 1-10")
+age = raw_input("Enter a number between 1-10 ")
 print "Your new dog is " + str(age)
 
 # color of bow----
 
-color = raw_input("Enter a color")
+color = raw_input("Enter a color ")
 print "Our pet shop has even you a FREE " + color + " hair bow!"
 
 print "Enjoy your new best friend!"
