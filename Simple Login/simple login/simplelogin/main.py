@@ -56,7 +56,7 @@ class MainHandler(webapp2.RequestHandler):
             user = self.request.GET['user']
             email = self.request.GET['email']
             phone = self.request.GET['phone']
-            self.response.write(page_head + user + ' ' + email + ' ' + phone + page_close)
+            self.response.write(page_head + user + ' ' + email + '' + phone + page_close)
         else:
             self.response.write(page_head + page_body + page_close) #print
 
