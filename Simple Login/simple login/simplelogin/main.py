@@ -36,6 +36,7 @@ class MainHandler(webapp2.RequestHandler):
         page_body = '''<form method="GET" action=""
         <label>Name: </label><input type="text" name="user"/>
         <label>Email: </label><input type="text" name="email"/>
+         <label>Phone: </label><input type="text" name="phone"/>
         <input type="radio" name="sex" value="male" checked>Male
         <input type="radio" name="sex" value="female">Female
         <input type="submit" value="Submit"/>
@@ -52,9 +53,10 @@ class MainHandler(webapp2.RequestHandler):
 
         if self.request.GET:
             #stores info we got from the form
-            user = self.request.GET['USER']
-            email = self.request.GET ['email']
-            self.response.write(page_head + user + ' ' + email + page_body + page_close)
+            user = self.request.GET['user']
+            email = self.request.GET['email']
+            phone = self.request.GET['phone']
+            self.response.write(page_head + user + ' ' + email + ' ' + phone + page_close)
         else:
             self.response.write(page_head + page_body + page_close) #print
 
