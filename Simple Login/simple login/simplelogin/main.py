@@ -29,16 +29,21 @@ class MainHandler(webapp2.RequestHandler):
         page_head = '''<!DOCTYPE HTML>
 <html>
     <head>
-        <title>Simple Form</title>
+        <title>Simple Contact Form</title>
     </head>
     <body>'''
 
         page_body = '''<form method="GET" action=""
         <label>Name: </label><input type="text" name="user"/>
         <label>Email: </label><input type="text" name="email"/>
-        <input type="submit" value="Submit"/>
         <input type="radio" name="sex" value="male" checked>Male
-        <input type="radio" name="sex" value="female">Female'''
+        <input type="radio" name="sex" value="female">Female
+        <input type="submit" value="Submit"/>
+        <p>Who would you like to contact?</p>
+            <a href="?email=donald@hr.com&user="Donald">Donald</a><br/>
+            <a href="?email=richard@hr.com&user="Richard">Richard</a><br/>
+            <a href="?email=brenda@hr.com&user="Brenda">Brenda</a><br/>
+            <a href="?email=lisa@hr.com&user="Lisa">Lisa</a><br/>'''
         page_close = '''
 
         </form>
