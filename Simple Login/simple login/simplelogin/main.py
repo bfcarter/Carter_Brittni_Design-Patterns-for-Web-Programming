@@ -41,10 +41,13 @@ class MainHandler(webapp2.RequestHandler):
         <input type="radio" name="sex" value="female">Female
         <input type="submit" value="Submit"/>
         <p>Who would you like to contact?</p>
-            <a href="?email=donald@hr.com&user="Donald">Donald</a><br/>
-            <a href="?email=richard@hr.com&user="Richard">Richard</a><br/>
-            <a href="?email=brenda@hr.com&user="Brenda">Brenda</a><br/>
-            <a href="?email=lisa@hr.com&user="Lisa">Lisa</a><br/>'''
+            <select name="contact">
+            <option value="donald">Donald</option>
+            <option value="Richard">Richard</option>
+            <option value="lisa">Lisa</option>
+            <option value="rhonda">Rhonda</option>
+            </select>
+            '''
         page_close = '''
 
         </form>
@@ -55,8 +58,10 @@ class MainHandler(webapp2.RequestHandler):
             #stores info we got from the form
             user = self.request.GET['user']
             email = self.request.GET['email']
+            sex = self.request.GET['sex']
             phone = self.request.GET['phone']
-            self.response.write(page_head + user + ' ' + email + '' + phone + page_close)
+            contact = self.request.GET['contact']
+            self.response.write(page_head + user + ' ' + email + '' + sex + '' + phone + '' + contact + '' + page_close)
         else:
             self.response.write(page_head + page_body + page_close) #print
 
