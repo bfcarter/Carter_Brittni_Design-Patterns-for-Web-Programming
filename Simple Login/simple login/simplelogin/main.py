@@ -29,10 +29,16 @@ class MainHandler(webapp2.RequestHandler):
         page_head = '''<!DOCTYPE HTML>
 <html>
     <head>
-        <title>Simple Contact Form</title>
+        <title>Contact Human Resources Department Form</title>
+    <style>
+    body {background-color: grey}
+    h1 {color: white}
+    </style>
     </head>
+    <img src= "http://brittnicarter.com/wp-content/uploads/2015/07/logo-300x300.png" width= "100" height= "115">
+    <h1>Contact Human Resources Department Form</h1>
     <body>'''
-#form
+
         page_body = '''<form method="GET" action=""
         <label>Name: </label><input type="text" name="user"/>
         <label>Email: </label><input type="text" name="email"/>
