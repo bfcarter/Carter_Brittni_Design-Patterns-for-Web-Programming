@@ -32,21 +32,22 @@ class MainHandler(webapp2.RequestHandler):
         <title>Simple Contact Form</title>
     </head>
     <body>'''
-
+#form
         page_body = '''<form method="GET" action=""
         <label>Name: </label><input type="text" name="user"/>
         <label>Email: </label><input type="text" name="email"/>
          <label>Phone: </label><input type="text" name="phone"/>
         <input type="radio" name="sex" value="male" checked>Male
         <input type="radio" name="sex" value="female">Female
-        <input type="submit" value="Submit"/>
+
         <p>Who would you like to contact?</p>
             <select name="contact">
-            <option value="donald">Donald</option>
-            <option value="Richard">Richard</option>
-            <option value="lisa">Lisa</option>
-            <option value="rhonda">Rhonda</option>
+                <option value="donald">Donald</option>
+                <option value="Richard">Richard</option>
+                <option value="lisa">Lisa</option>
+                <option value="rhonda">Rhonda</option>
             </select>
+            <input type="submit" value="Submit"/>
             '''
         page_close = '''
 
@@ -61,7 +62,7 @@ class MainHandler(webapp2.RequestHandler):
             sex = self.request.GET['sex']
             phone = self.request.GET['phone']
             contact = self.request.GET['contact']
-            self.response.write(page_head + user + ' ' + email + '' + sex + '' + phone + '' + contact + '' + page_close)
+            self.response.write(page_head + user + ' ' + email + ' ' + sex + ' ' + phone + ' ' + contact + ' ' + page_close)
         else:
             self.response.write(page_head + page_body + page_close) #print
 
