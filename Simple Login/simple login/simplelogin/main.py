@@ -28,22 +28,20 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         page_head = '''<!DOCTYPE HTML>
 <html>
+
     <head>
         <title>Contact Human Resources Department Form</title>
-    <style>
-    body {background-color: grey}
-    h1 {color: white}
-
-    </style>
+        <link rel="stylesheet" href="css/stylesheet.css">
     </head>
     <img src= "http://brittnicarter.com/wp-content/uploads/2015/07/logo-300x300.png" width= "100" height= "115">
-    <h1 style="font-family:verdana">Contact Human Resources Department Form</h1>
+    <h1>Contact Human Resources Department Form</h1>
     <body>'''
 
+        # form
         page_body = '''<form method="GET" action=""
         <label>Name: </label><input type="text" name="user"/>
         <label>Email: </label><input type="text" name="email"/>
-         <label>Phone: </label><input type="text" name="phone"/>
+        <label>Phone: </label><input type="text" name="phone"/>
         <input type="radio" name="sex" value="male" checked>Male
         <input type="radio" name="sex" value="female">Female
 
