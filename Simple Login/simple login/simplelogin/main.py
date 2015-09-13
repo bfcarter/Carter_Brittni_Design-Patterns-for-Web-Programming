@@ -33,10 +33,11 @@ class MainHandler(webapp2.RequestHandler):
     <style>
     body {background-color: grey}
     h1 {color: white}
+
     </style>
     </head>
     <img src= "http://brittnicarter.com/wp-content/uploads/2015/07/logo-300x300.png" width= "100" height= "115">
-    <h1>Contact Human Resources Department Form</h1>
+    <h1 style="font-family:verdana">Contact Human Resources Department Form</h1>
     <body>'''
 
         page_body = '''<form method="GET" action=""
