@@ -10,24 +10,32 @@ import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        page = '''<DOCTYPE HTML>
-<HTML>
+        page_head = '''<!DOCTYPE HTML>
+<html>
     <head>
         <title>Simple Form</title>
     </head>
-    <body>
-        <form method="GET">
-            <label>Name:</label><input type="text" name="user"/>
-            <label>Email:</label><input type="text" name="email"/>
-            <input type="submit" value="submit"/>
-        </form>
+    <body>'''
 
+        page_body = '''<form method="GET" action=""
+        <label>Name: </label><input type="text" name="user"/>
+        <label>Email: </label><input type="text" name="email"/>
+        <input type="submit" value="Submit"/>
+        <input type="radio" name="sex" value="male" checked>Male
+        <input type="radio" name="sex" value="female">Female'''
+        page_close = '''
+
+        </form>
     </body>
-</HTML>'''
+</html>'''
+
         if self.request.GET:
-            user= self.request.GET ['user']
-            email= self.request.GET ['email']
-        self.response.write('Hello world!') #print
+            #stores info we got from the form
+            user = self.request.GET['USER']
+            email = self.request.GET ['email']
+            self.response.write(page_head + user + ' ' + email + page_body + page_close)
+        else:
+            self.response.write(page_head + page_body + page_close) #print
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
