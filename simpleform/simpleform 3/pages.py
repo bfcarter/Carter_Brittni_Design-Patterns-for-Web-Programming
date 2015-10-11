@@ -41,6 +41,17 @@ class Page(object):
     </body>
 </html>
         """
+        
+        
+        
+        <p>What product are you most interested in?</p>
+            <select name="product">
+                <option value="Body Butter">Body Butter</option>
+                <option value="Sugar Scrub">Sugar Scrub</option>
+                <option value="Shea Soap">Shea Soap</option>
+                <option value="Lip Balm">Lip Balm</option>
+            </select>
+            <input type="submit" value="Submit"/>
 
         if self.body.GET:
             #stores info we got from the form

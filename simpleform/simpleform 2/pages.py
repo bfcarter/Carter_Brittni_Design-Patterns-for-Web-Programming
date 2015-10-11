@@ -41,7 +41,11 @@ class Page(object):
     </body>
 </html>
         """
-
+            def print_out(self):
+                all = self.head + self.body + self.close
+all = all.format(**locals())
+    return all
+        
         if self.body.GET:
             #stores info we got from the form
             user = self.body.GET['user']

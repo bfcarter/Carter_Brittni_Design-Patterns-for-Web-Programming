@@ -15,11 +15,21 @@
 # limitations under the License.
 #
 import webapp2
+from pages import ResultsPage
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         f = Form()
-
+        if self.body.GET:
+            #stores info we got from the form
+            user = self.body.GET['user']
+            email = self.body.GET['email']
+            sex = self.body.GET['sex']
+            phone = self.body.GET['phone']
+            product = self.body.GET['product']
+            self.body.write(self.head + user + ' ' + email + ' ' + sex + ' ' + phone + ' ' + product + ' ' + self.close)
+        else:
+            self.body.write(self.head + self.body + self.close) #print
 
 class Form(object):
     def __init__(self):
@@ -35,8 +45,7 @@ class Form(object):
     <img src= "http://brittnicarter.com/wp-content/uploads/2015/07/logo-300x300.png" width= "100" height= "115">
     <body>
         """
-        self.body = '''<form method="GET" action=""
-        <h1>"Sign Up for our mailing list!"
+        self.body = '''<form method="GET" action="""Welcome to my Magazine Sign Up Page!"
         <label>Name: </label><input type="text" name="user"/>
         <label>Email: </label><input type="text" name="email"/>
         <label>Phone: </label><input type="text" name="phone"/>
@@ -50,25 +59,25 @@ class Form(object):
                 <option value="Shea Soap">Shea Soap</option>
                 <option value="Lip Balm">Lip Balm</option>
             </select>
-            <input type="submit" value="Submit"/>
-            '''
+            <input type="submit" value="Submit"/>'''
         self.close = """
-
         </form>
     </body>
-</html>
-        """
+</html>"""
 
-        if self.body.GET:
-            #stores info we got from the form
-            user = self.body.GET['user']
-            email = self.body.GET['email']
-            sex = self.body.GET['sex']
-            phone = self.body.GET['phone']
-            contact = self.body.GET['product']
-            self.body.write(self.head + user + ' ' + email + ' ' + sex + ' ' + phone + ' ' + contact + ' ' + self.close)
-        else:
-            self.body.write(self.head + self.body + self.close) #print
+
+
+    def print_out(self):
+        all = (self.head + self.body + self.close).format(**locals())
+        return all
+
+class ResultsForm(object):
+    def __init__(self):
+        self.title = "Sign Up complete"
+        self.css = " css/stylesheet.css"
+        self.head = '''
+
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
