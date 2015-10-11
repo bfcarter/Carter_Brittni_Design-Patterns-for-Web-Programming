@@ -12,12 +12,6 @@ from pages import Page
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = Page()
-        l = Library()
-class Form(object):
-    def __init__(self):
-        self.title = "Weather Report"
-        self.css = " css/stylesheet.css"
-        self.head = """
 
 
 
