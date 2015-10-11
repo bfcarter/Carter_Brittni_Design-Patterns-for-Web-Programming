@@ -78,7 +78,7 @@ class ResultsForm(object):
         self.head = '''
 
 
-
+'''
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
