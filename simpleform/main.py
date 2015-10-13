@@ -15,71 +15,54 @@
 # limitations under the License.
 #
 import webapp2
-from pages import ResultsPage
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        f = Form()
-        if self.body.GET:
-            #stores info we got from the form
-            user = self.body.GET['user']
-            email = self.body.GET['email']
-            sex = self.body.GET['sex']
-            phone = self.body.GET['phone']
-            product = self.body.GET['product']
-            self.body.write(self.head + user + ' ' + email + ' ' + sex + ' ' + phone + ' ' + product + ' ' + self.close)
-        else:
-            self.body.write(self.head + self.body + self.close) #print
-
-class Form(object):
-    def __init__(self):
-        self.title = "Magazine Sign Up"
-        self.css = " css/style.css"
-        self.head = """
-<!DOCTYPE HTML>
+        page_head = '''<!DOCTYPE HTML>
 <html>
+
     <head>
-        <title>{self.title}</title>
-        <link href="{self.css}" rel="stylesheet" type="text/css"/>
+        <title>Contact Human Resources Department Form</title>
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <img src= "http://brittnicarter.com/wp-content/uploads/2015/07/logo-300x300.png" width= "100" height= "115">
-    <body>
-        """
-        self.body = '''<form method="GET" action="""Welcome to my Magazine Sign Up Page!"
+    <h1>Contact Human Resources Department Form</h1>
+    <body>'''
+
+        # form
+        page_body = '''<form method="GET" action=""
         <label>Name: </label><input type="text" name="user"/>
         <label>Email: </label><input type="text" name="email"/>
         <label>Phone: </label><input type="text" name="phone"/>
         <input type="radio" name="sex" value="male" checked>Male
         <input type="radio" name="sex" value="female">Female
 
-        <p>What product are you most interested in?</p>
-            <select name="product">
-                <option value="Body Butter">Body Butter</option>
-                <option value="Sugar Scrub">Sugar Scrub</option>
-                <option value="Shea Soap">Shea Soap</option>
-                <option value="Lip Balm">Lip Balm</option>
+        <p>Who would you like to contact?</p>
+            <select name="contact">
+                <option value="donald">Donald</option>
+                <option value="Richard">Richard</option>
+                <option value="lisa">Lisa</option>
+                <option value="rhonda">Rhonda</option>
             </select>
-            <input type="submit" value="Submit"/>'''
-        self.close = """
+            <input type="submit" value="Submit"/>
+            '''
+        page_close = '''
+
         </form>
     </body>
-</html>"""
+</html>'''
 
+        if self.request.GET:
+            #stores info we got from the form
+            user = self.request.GET['user']
+            email = self.request.GET['email']
+            sex = self.request.GET['sex']
+            phone = self.request.GET['phone']
+            contact = self.request.GET['contact']
+            self.response.write(page_head + user + ' ' + email + ' ' + sex + ' ' + phone + ' ' + contact + ' ' + page_close)
+        else:
+            self.response.write(page_head + page_body + page_close) #print
 
-
-    def print_out(self):
-        all = (self.head + self.body + self.close).format(**locals())
-        return all
-
-class ResultsForm(object):
-    def __init__(self):
-        self.title = "Sign Up complete"
-        self.css = " css/stylesheet.css"
-        self.head = '''
-
-
-'''
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
-
