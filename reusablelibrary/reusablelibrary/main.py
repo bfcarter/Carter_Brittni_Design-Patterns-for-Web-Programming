@@ -12,10 +12,15 @@ class MainHandler(webapp2.RequestHandler):
         if self.request.GET:
             temp = int(self.request.GET["temperature"])
             c = l.convert_celuis(temp)
-            self.response.write("<h1>you got form crap " + str(c) + "</h1>")
+            k = l.convert_kelvin(temp)
+            r = l.convert_rankine(temp)
+            n = self.request.GET['name']
+            z = self.request.GET['city']
+            self.response.write( n + ", currently in it's " + str(c) + " degrees Celsius, " +  str(k) + " degrees Kelvin or " + str(r) + " degrees Rankine in " + z)
+
         else:
             self.response.write(p.print_out())
-        #lib = FavoriteCar()
+
 class Form(object):
     def __init__(self):
         self.title = "Weather Report"
@@ -40,15 +45,16 @@ class Form(object):
         <label>Name:</label><input type="text" name="name"/>
         <label>City: </label><input type="text" name="city"/>
         <label>Temperature </label><input type="text" name="temperature"/>
-        <input type="radio" name="transmission" value="Automatic" checked>Automatic
-        <input type="radio" name="transmission" value="Manual">Manual
-            <input type="submit" value="Submit"/>
+
+
             <p>What does it look like outside?</p>
             <select name="colors">
                 <option value="sunny">Sunny</option>
                 <option value="cloudy">Cloudy</option>
                 <option value="thunderstorm">Thunderstorm</option>
                 <option value="other">Other</option>
+                <input type="submit" value="Submit"/>
+
             </select>
 
             '''
@@ -68,7 +74,7 @@ class ResultsForm(object):
         self.title = "Weather Report"
         self.css = " css/stylesheet.css"
         self.head = """
-
+"""
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)

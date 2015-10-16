@@ -3,6 +3,8 @@ class Library(object):
         pass
 
     def convert_celuis(self,t):
-        return t - 10
-
-
+        return (t - 32) * 0.55555555555
+    def convert_kelvin(self,t):
+        return (t + 459.67) * 0.55555555555
+    def convert_rankine(self,t):
+        return (t + 459.67)
