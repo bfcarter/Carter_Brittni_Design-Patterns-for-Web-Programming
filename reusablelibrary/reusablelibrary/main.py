@@ -4,12 +4,12 @@ from library import Library
 #from pages import ResultsPage
 
 class MainHandler(webapp2.RequestHandler):
-    def get(self):
 
+    def get(self):
         #page for class
         p = Form()
         l = Library()
-        self.css = " css/stylesheet.css"
+
         if self.request.GET:
             temp = int(self.request.GET["temperature"])
             c = l.convert_celuis(temp)
@@ -35,7 +35,7 @@ class Form(object):
         <title>{self.title}</title>
         <link rel="stylesheet" href="{self.css}">
     </head>
-    <img src= "http://brittnicarter.com/wp-content/uploads/2015/07/logo-300x300.png" width= "100" height= "115">
+    <img src= "http://cdn.abclocal.go.com/content/kabc/images/cms/44096_1280x720.jpg" width= "150" height= "115">
     <h1>Weather Report</h1>
     <body>"""
 
