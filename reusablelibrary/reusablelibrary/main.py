@@ -9,6 +9,7 @@ class MainHandler(webapp2.RequestHandler):
         #page for class
         p = Form()
         l = Library()
+        self.css = " css/stylesheet.css"
         if self.request.GET:
             temp = int(self.request.GET["temperature"])
             c = l.convert_celuis(temp)
