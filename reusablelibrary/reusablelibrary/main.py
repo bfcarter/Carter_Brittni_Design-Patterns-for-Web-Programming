@@ -11,7 +11,7 @@ class MainHandler(webapp2.RequestHandler):
         #page for class
         p = Form()
         l = Library()
-#print out results 
+#print out results
         if self.request.GET:
             temp = int(self.request.GET["temperature"])
             c = l.convert_celuis(temp)
@@ -20,7 +20,7 @@ class MainHandler(webapp2.RequestHandler):
             n = self.request.GET['name']
             z = self.request.GET['city']
             self.response.write( n + ", currently in it's " + str(c) + " degrees Celsius, " +  str(k) + " degrees Kelvin or " + str(r) + " degrees Rankine in " + z)
-
+#show form if its not filled out
         else:
             self.response.write(p.print_out())
 
