@@ -1,9 +1,8 @@
 class Library(object):
     def __init__(self):
-        self.title = "Weather Report"
-        self.css = " css/stylesheet.css"
+        pass
 
-
+#math for temp
     def convert_celuis(self,t):
         return (t - 32) * 0.55555555555
     def convert_kelvin(self,t):
@@ -11,7 +10,3 @@ class Library(object):
     def convert_rankine(self,t):
         return (t + 459.67)
 
-class ResultsForm(object):
-    def __init__(self):
-        self.title = "Weather Report"
-        self.css = " css/stylesheet.css"

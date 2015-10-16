@@ -1,6 +1,8 @@
 
 import webapp2
 from library import Library
+
+
 #from pages import ResultsPage
 
 class MainHandler(webapp2.RequestHandler):
@@ -9,7 +11,7 @@ class MainHandler(webapp2.RequestHandler):
         #page for class
         p = Form()
         l = Library()
-
+#print out results 
         if self.request.GET:
             temp = int(self.request.GET["temperature"])
             c = l.convert_celuis(temp)
@@ -24,6 +26,7 @@ class MainHandler(webapp2.RequestHandler):
 
 class Form(object):
     def __init__(self):
+        #header and css
         self.title = "Weather Report"
         self.css = " css/stylesheet.css"
         self.head = """
