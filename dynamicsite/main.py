@@ -8,10 +8,10 @@ class MainHandler(webapp2.RequestHandler):
       y = Yarn()
 
 class MainPage(object):
+
     def __init__(self):
         self.title = "Weather Report"
         self.css = " css/stylesheet.css"
-        if
 
         page = '''<!DOCTYPE HTML>
 
