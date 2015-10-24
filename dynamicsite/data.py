@@ -9,7 +9,7 @@ class Yarn(object):
         self.image = ""
         self.brand = ""
 
-class data(object):
+class Data(object):
     def __init__(self):
 
         thickandquick = Yarn()
