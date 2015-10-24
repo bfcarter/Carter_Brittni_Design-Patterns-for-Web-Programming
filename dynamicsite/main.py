@@ -4,8 +4,16 @@ from data import Data, Yarn
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-    if Yarn = thickandquick
-        page_head = '''<!DOCTYPE HTML>
+      d= Data()
+      y = Yarn()
+
+class MainPage(object):
+    def __init__(self):
+        self.title = "Weather Report"
+        self.css = " css/stylesheet.css"
+        if 
+
+        page = '''<!DOCTYPE HTML>
 
 
 
@@ -14,7 +22,10 @@ class MainHandler(webapp2.RequestHandler):
         <title> Brittni's Yarn</title>
     </head>
 
-    page_body = '''
+    <body> <h1>Welcome to Brittni's Yarn Shop!</h1>
+        <p>We have a variety of yarn for you to choose from. Please select one of the choices below.</p>
+    </body>
+</html>'''
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
