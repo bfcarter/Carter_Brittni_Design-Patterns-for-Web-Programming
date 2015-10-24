@@ -18,29 +18,8 @@ import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        a = Account()
-        __balance = 376
-
-
-
-class Account(object):
-    def __init__(self):
-        self.__balance = 0
-        self.owner = ""
-        self.interest_rate = 0
-
-    @property
-    def balance(self):
-        return self.__balance
-
-    @balance.setter
-    def balance(selfSelf, new_bal):
-        self.__balance = new_bal
-
-
-
+        self.response.write('Hello world!')
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
-
