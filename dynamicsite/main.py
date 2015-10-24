@@ -11,7 +11,7 @@ class MainPage(object):
     def __init__(self):
         self.title = "Weather Report"
         self.css = " css/stylesheet.css"
-        if 
+        if
 
         page = '''<!DOCTYPE HTML>
 
