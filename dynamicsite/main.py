@@ -6,12 +6,16 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
       d= Data()
       y = Yarn()
+      m= MainPage
+      self.response.write(m.print_out())
 
 class MainPage(object):
 
     def __init__(self):
-        self.title = "Weather Report"
+        self.title = "Yarn List"
         self.css = " css/stylesheet.css"
+
+
 
         page = '''<!DOCTYPE HTML>
 
@@ -22,7 +26,10 @@ class MainPage(object):
         <title> Brittni's Yarn</title>
     </head>
 
-    <body> <h1>Welcome to Brittni's Yarn Shop!</h1>
+    <body>
+    <img src="https://lh6.ggpht.com/t9nq4CcL7MEqmxb_l5Y4uHNRePPKOVm7CYc8oeKk9DF2MGCn0fs70YWAlw2By1WuUCqN=w300" width= "150" height= "115">
+
+    <h1>Welcome to Brittni's Yarn Shop!</h1>
         <p>We have a variety of yarn for you to choose from. Please select one of the choices below.</p>
 
     <div id="yarns">
