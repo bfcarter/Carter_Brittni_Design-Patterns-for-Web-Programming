@@ -32,8 +32,10 @@ class MainPage(object):
             <small>Price: $6.99</small>
             <li id="home"><a href="?Yarn=hometown">Hometown</a>
             <br>
-            <small>Price:$3.99
+            <small>Price:$3.99</small>
             <li id="vanna"><a href="?Yarn=vannaschoice">Vanna's Choice</a>
+            <br>
+            <small>Price: $4.99</small>
             <li id="thick"><a href="?Yarn=thickandquick">Thick and Quick</a>
             <li id="buttercream"><a href="?Yarn=buttercream">Thick and Thin</a>
     </body>
