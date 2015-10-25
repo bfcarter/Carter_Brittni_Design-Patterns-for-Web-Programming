@@ -7,7 +7,7 @@ class MainHandler(webapp2.RequestHandler):
       d= Data()
       y = Yarn()
       m= MainPage
-      self.response.write(m.print_out())
+      
 
 class MainPage(object):
 
