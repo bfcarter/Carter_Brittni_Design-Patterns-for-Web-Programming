@@ -1,4 +1,4 @@
-
+#imports
 import webapp2
 from data import Data, Yarn, YarnUse
 
@@ -7,7 +7,13 @@ class MainHandler(webapp2.RequestHandler):
       d= Data()
       y = Yarn()
       m= MainPage
-
+    if self.request.GET:
+        thick = self.request.GET['thick']
+        home = self.request.GET['home']
+        butter = self.request.GET['buttercream']
+        super = self.request.GET['super']
+    else:
+        self.response.write(MainPage)
 
 class MainPage(object):
 
@@ -35,19 +41,19 @@ class MainPage(object):
     <div id="yarns">
 
         <ul>
-            <li id="thick"><a href="?Yarn=thickandquick">Thick and Quick</a>
+            <li name="thick"><a href="?Yarn=thickandquick">Thick and Quick</a>
             <br>
             <small>Price: $6.99</small>
-            <li id="home"><a href="?Yarn=hometown">Hometown</a>
+            <li name="home"><a href="?Yarn=hometown">Hometown</a>
             <br>
             <small>Price:$3.99</small>
-            <li id="vanna"><a href="?Yarn=vannaschoice">Vanna's Choice</a>
+            <li name="vanna"><a href="?Yarn=vannaschoice">Vanna's Choice</a>
             <br>
             <small>Price: $4.99</small>
-            <li id="super"><a href="?Yarn=supersaver">Super Saver</a>
+            <li name="super"><a href="?Yarn=supersaver">Super Saver</a>
             <br>
             <small>Price: $2.99</small>
-            <li id="buttercream"><a href="?Yarn=buttercream">Thick and Thin</a>
+            <li name="buttercream"><a href="?Yarn=buttercream">Thick and Thin</a>
             <br>
             <small>Price: $8.99</small>
         </ul>
