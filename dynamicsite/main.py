@@ -1,6 +1,6 @@
 
 import webapp2
-from data import Data, Yarn
+from data import Data, Yarn, YarnUse
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
