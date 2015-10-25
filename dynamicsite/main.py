@@ -28,7 +28,9 @@ class MainPage(object):
     <div id="yarns">
         <ul>
             <li id="thick"><a href="?Yarn=thickandquick">Thick and Quick</a>
-
+            <li id="home"><a href="?Yarn=hometown">Hometown</a>
+            <li id="vanna"><a href="?Yarn=vannaschoice">Vanna's Choice</a>
+            <li id="thick"><a href="?Yarn=thickandquick">Thick and Quick</a>
     </body>
 </html>'''
 
