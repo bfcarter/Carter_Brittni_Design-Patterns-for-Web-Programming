@@ -1,6 +1,4 @@
-
-
-class Yarn(object):
+class YarnUse(object):
     def __init__(self):
         self.gauge = 0.00
         self.weight = 0.00
@@ -8,6 +6,19 @@ class Yarn(object):
         self.yards = 0.00
         self.image = ""
         self.brand = ""
+
+class Yarn(object):
+    def __init__(self):
+        super(Yarn,self).__init__()
+        self.cost = 0.0
+
+        @property
+        def cost(self):
+            return self.__cost
+
+        @cost.setter
+        def cost(self,c):
+            self.__cost = c
 
 class Data(object):
     def __init__(self):
