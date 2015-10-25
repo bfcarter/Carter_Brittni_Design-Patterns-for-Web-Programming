@@ -7,7 +7,7 @@ class MainHandler(webapp2.RequestHandler):
       d= Data()
       y = Yarn()
       m= MainPage
-      
+
 
 class MainPage(object):
 
