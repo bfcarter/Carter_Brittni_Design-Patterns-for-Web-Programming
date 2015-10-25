@@ -15,7 +15,7 @@ class MainPage(object):
         self.title = "Yarn List"
         self.css = " css/stylesheet.css"
 
-
+#list of yarn - main page
 
         page = '''<!DOCTYPE HTML>
 
@@ -33,6 +33,7 @@ class MainPage(object):
         <p>We have a variety of yarn for you to choose from. Please select one of the choices below.</p>
 
     <div id="yarns">
+
         <ul>
             <li id="thick"><a href="?Yarn=thickandquick">Thick and Quick</a>
             <br>

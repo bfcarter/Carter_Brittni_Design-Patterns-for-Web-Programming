@@ -22,7 +22,7 @@ class Yarn(object):
 
 class Data(object):
     def __init__(self):
-
+#yarn choices
         thickandquick = Yarn()
         thickandquick.cost = 6.99
         thickandquick.name = "Thick and Quick"
