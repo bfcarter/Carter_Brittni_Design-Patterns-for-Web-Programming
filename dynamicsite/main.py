@@ -28,9 +28,14 @@ class MainPage(object):
     <div id="yarns">
         <ul>
             <li id="thick"><a href="?Yarn=thickandquick">Thick and Quick</a>
+            <br>
+            <small>Price: $6.99</small>
             <li id="home"><a href="?Yarn=hometown">Hometown</a>
+            <br>
+            <small>Price:$3.99
             <li id="vanna"><a href="?Yarn=vannaschoice">Vanna's Choice</a>
             <li id="thick"><a href="?Yarn=thickandquick">Thick and Quick</a>
+            <li id="buttercream"><a href="?Yarn=buttercream">Thick and Thin</a>
     </body>
 </html>'''
 
