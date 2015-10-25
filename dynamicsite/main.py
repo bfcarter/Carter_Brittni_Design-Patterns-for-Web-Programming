@@ -40,6 +40,10 @@ class MainPage(object):
             <br>
             <small>Price: $2.99</small>
             <li id="buttercream"><a href="?Yarn=buttercream">Thick and Thin</a>
+            <br>
+            <small>Price: $8.99</small>
+        </ul>
+    </div>
     </body>
 </html>'''
 
