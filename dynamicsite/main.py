@@ -24,6 +24,11 @@ class MainPage(object):
 
     <body> <h1>Welcome to Brittni's Yarn Shop!</h1>
         <p>We have a variety of yarn for you to choose from. Please select one of the choices below.</p>
+
+    <div id="yarns">
+        <ul>
+            <li id="thick"><a href="?Yarn=thickandquick">Thick and Quick</a>
+
     </body>
 </html>'''
 
